@@ -290,6 +290,74 @@
                 font-size: 1.2rem;
             }
         }
+
+        /* Company Overview Section */
+        .company-info-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+        }
+
+        .company-info {
+            margin: 0;
+            padding: 0;
+        }
+
+        .company-info dt {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(201, 169, 97, 0.15);
+            letter-spacing: 0.5px;
+        }
+
+        .company-info dt:first-child {
+            margin-top: 0;
+        }
+
+        .company-info dd {
+            margin: 0;
+            padding: 0.75rem 0 1rem 1.5rem;
+            color: var(--text-body);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .company-disclaimer {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(201, 169, 97, 0.2);
+            color: #666;
+            font-size: 0.85rem;
+            text-align: center;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .company-info-wrapper {
+                padding: 2rem 1.5rem;
+            }
+
+            .company-info dt {
+                font-size: 0.9rem;
+            }
+
+            .company-info dd {
+                padding-left: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .company-disclaimer {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -356,6 +424,34 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- Company Overview Section -->
+    <section class="company-overview-section" style="padding: 80px 0; background: white;">
+        <div class="container">
+            <h2 class="section-title" data-ja="会社概要" data-en="Company Overview">会社概要</h2>
+
+            <div class="company-info-wrapper">
+                <dl class="company-info">
+                    <dt data-ja="会社名" data-en="Company Name">会社名</dt>
+                    <dd data-ja="AmmaMia株式会社（設立準備中）" data-en="AmmaMia Inc. (In Preparation)">AmmaMia株式会社（設立準備中）</dd>
+
+                    <dt data-ja="所在地（登記予定地）" data-en="Registered Address (Planned)">所在地（登記予定地）</dt>
+                    <dd data-ja="〒894-0412 鹿児島県大島郡龍郷町芦徳120番1" data-en="120-1 Ashitoku, Tatsugo-cho, Oshima-gun, Kagoshima 894-0412">〒894-0412 鹿児島県大島郡龍郷町芦徳120番1</dd>
+
+                    <dt data-ja="土地取得" data-en="Land Acquisition">土地取得</dt>
+                    <dd data-ja="宅地・原野・道路 含む811.95㎡（取得価格 約1,400万円）" data-en="811.95㎡ including residential, undeveloped land, and road areas (Acquisition cost: approx. ¥14,000,000)">宅地・原野・道路 含む811.95㎡（取得価格 約1,400万円）</dd>
+
+                    <dt data-ja="本社（将来的予定）" data-en="Head Office (Future Plan)">本社（将来的予定）</dt>
+                    <dd data-ja="東京都内（事業拡大後に移転検討）" data-en="Tokyo area (Relocation under consideration after business expansion)">東京都内（事業拡大後に移転検討）</dd>
+
+                    <dt data-ja="設立状況" data-en="Establishment Status">設立状況</dt>
+                    <dd data-ja="登記手続き中（2025年設立予定）" data-en="Registration in progress (Planned for 2025)">登記手続き中（2025年設立予定）</dd>
+                </dl>
+
+                <p class="company-disclaimer" data-ja="※本ページの記載内容は設立準備段階の情報です。" data-en="* The information on this page reflects our pre-establishment preparation stage.">※本ページの記載内容は設立準備段階の情報です。</p>
+            </div>
         </div>
     </section>
 
