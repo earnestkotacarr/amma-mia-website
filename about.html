@@ -292,70 +292,75 @@
         }
 
         /* Company Overview Section */
+        .company-overview-section {
+            padding: 60px 0 !important;
+        }
+
         .company-info-wrapper {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
-            background: white;
-            padding: 3rem;
-            border: 1px solid rgba(201, 169, 97, 0.2);
-            box-shadow: var(--shadow);
-            border-radius: 8px;
+            background: var(--bg-light);
+            padding: 2rem 2.5rem;
+            border-left: 3px solid var(--secondary-color);
         }
 
         .company-info {
             margin: 0;
             padding: 0;
+            font-size: 0.9rem;
         }
 
         .company-info dt {
             color: var(--primary-color);
             font-weight: 600;
-            font-size: 0.95rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid rgba(201, 169, 97, 0.15);
-            letter-spacing: 0.5px;
+            display: inline;
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
         }
 
-        .company-info dt:first-child {
-            margin-top: 0;
+        .company-info dt::after {
+            content: '：';
         }
 
         .company-info dd {
+            display: inline;
             margin: 0;
-            padding: 0.75rem 0 1rem 1.5rem;
             color: var(--text-body);
-            line-height: 1.8;
-            font-size: 0.95rem;
+            line-height: 2;
+            font-size: 0.9rem;
+        }
+
+        .company-info dd::after {
+            content: '';
+            display: block;
+            margin-bottom: 0.8rem;
         }
 
         .company-disclaimer {
-            margin-top: 2.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(201, 169, 97, 0.2);
-            color: #666;
-            font-size: 0.85rem;
-            text-align: center;
-            font-style: italic;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(201, 169, 97, 0.15);
+            color: #888;
+            font-size: 0.8rem;
+            text-align: right;
         }
 
         @media (max-width: 768px) {
+            .company-overview-section {
+                padding: 40px 0 !important;
+            }
+
             .company-info-wrapper {
-                padding: 2rem 1.5rem;
+                padding: 1.5rem;
             }
 
-            .company-info dt {
-                font-size: 0.9rem;
-            }
-
+            .company-info dt,
             .company-info dd {
-                padding-left: 1rem;
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
 
             .company-disclaimer {
-                font-size: 0.8rem;
+                font-size: 0.75rem;
             }
         }
     </style>
