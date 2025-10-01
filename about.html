@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Amma Mia</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-hero {
+            margin-top: 80px;
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            text-align: center;
+        }
+        
+        .about-hero h1 {
+            color: var(--secondary-color);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .about-hero p {
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .team-section {
+            padding: 80px 0;
+        }
+        
+        .team-member {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            align-items: center;
+        }
+        
+        .team-member:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .member-photo {
+            flex-shrink: 0;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 5px solid var(--secondary-color);
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-info {
+            flex: 1;
+        }
+        
+        .member-name {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-name-en {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        
+        .member-bio {
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* News Feed Styles */
+        .news-feed {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .news-feed::before {
+            content: '';
+            position: absolute;
+            left: 90px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--secondary-color), transparent);
+            opacity: 0.3;
+        }
+        
+        .news-post {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            animation: fadeIn 0.6s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .post-date {
+            flex-shrink: 0;
+            width: 80px;
+            text-align: center;
+            padding-top: 1rem;
+        }
+        
+        .post-date .day {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            line-height: 1;
+        }
+        
+        .post-date .month {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            margin: 0.25rem 0;
+        }
+        
+        .post-date .year {
+            display: block;
+            font-size: 0.85rem;
+            color: #999;
+        }
+        
+        .post-content {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .post-content::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 2rem;
+            width: 16px;
+            height: 16px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            border: 3px solid var(--bg-alt);
+        }
+        
+        .post-content:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .post-content h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .post-content p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .post-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .tag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        /* Mobile Home button - hidden on desktop */
+        .mobile-home {
+            display: none;
+        }
+        
+        .current-page {
+            color: var(--secondary-color) !important;
+        }
+        
+        @media (max-width: 768px) {
+            /* Show only Home and language switch on mobile for About page */
+            .desktop-only {
+                display: none !important;
+            }
+            
+            .mobile-home {
+                display: inline-block !important;
+            }
+            
+            .team-member,
+            .team-member:nth-child(even) {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .member-photo {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .news-feed::before {
+                left: 20px;
+            }
+            
+            .news-post {
+                flex-direction: column;
+            }
+            
+            .post-date {
+                width: 100%;
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                padding: 0;
+                margin-bottom: 1rem;
+            }
+            
+            .post-date .day {
+                font-size: 1.5rem;
+            }
+            
+            .post-content::before {
+                display: none;
+            }
+            
+            .post-content {
+                padding: 1.5rem;
+            }
+            
+            .post-content h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration: none;">
+                    <h1>Amma Mia</h1>
+                </a>
+                <span class="tagline" data-ja="奄美の美を世界へ" data-en="Amami's Beauty to the World">奄美の美を世界へ</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="mobile-home" data-ja="ホーム" data-en="Home">ホーム</a>
+                <a href="index.html#overview" class="desktop-only" data-ja="事業概要" data-en="Overview">事業概要</a>
+                <a href="index.html#accommodation" class="desktop-only" data-ja="民泊施設" data-en="Accommodation">民泊施設</a>
+                <a href="index.html#branding" class="desktop-only" data-ja="ブランド" data-en="Brand">ブランド</a>
+                <a href="index.html#crowdfunding" class="desktop-only" data-ja="クラウドファンディング" data-en="Crowdfunding">クラウドファンディング</a>
+                <a href="about.html" class="desktop-only current-page" data-ja="About" data-en="About">About</a>
+                <button class="lang-switch" onclick="toggleLanguage()">EN/日本語</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="about-hero">
+        <h1 data-ja="About Amma Mia" data-en="About Amma Mia">About Amma Mia</h1>
+        <p data-ja="チーム紹介とプロジェクトの進捗" data-en="Meet Our Team and Project Updates">チーム紹介とプロジェクトの進捗</p>
+    </div>
+
+    <section class="team-section">
+        <div class="container">
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="images/crowdfunding/152505.jpg" alt="Shoji Kitayama">
+                </div>
+                <div class="member-info">
+                    <h2 class="member-name">北山祥二</h2>
+                    <p class="member-name-en">Shoji Kitayama</p>
+                    <div class="member-bio">
+                        <p data-ja="鹿児島県立川内高校卒業後渡米、アリゾナ州立大学ファイナンス専攻。外資系金融で30年以上勤務し、世界各地のリゾートを訪問。その豊富な海外リゾート体験を生かし、地元鹿児島の活性化に残りの人生の時間と努力を注ぎたいと考えています。これは日本国民のために成功させたい所存です。" 
+                           data-en="After graduating from Kagoshima Prefectural Sendai High School, moved to the United States and majored in Finance at Arizona State University. Worked in foreign financial institutions for over 30 years, visiting resorts around the world. Leveraging extensive international resort experience to dedicate remaining life to revitalizing local Kagoshima. Committed to making this succeed for the Japanese people.">
+                            鹿児島県立川内高校卒業後渡米、アリゾナ州立大学ファイナンス専攻。外資系金融で30年以上勤務し、世界各地のリゾートを訪問。その豊富な海外リゾート体験を生かし、地元鹿児島の活性化に残りの人生の時間と努力を注ぎたいと考えています。これは日本国民のために成功させたい所存です。
+                        </p>
+                        <p data-ja="その他、地元薩摩川内市にデータセンター、蓄電所を誘致しようと頑張っています。スマートシティの計画にも参加しております。" 
+                           data-en="Additionally, working to attract data centers and power storage facilities to local Satsumasendai City. Also participating in smart city planning.">
+                            その他、地元薩摩川内市にデータセンター、蓄電所を誘致しようと頑張っています。スマートシティの計画にも参加しております。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="images/about/Earnest Kota Carr.jpg" alt="Earnest Kota Carr">
+                </div>
+                <div class="member-info">
+                    <h2 class="member-name">カー アーネスト航太</h2>
+                    <p class="member-name-en">Earnest Kota Carr</p>
+                    <div class="member-bio">
+                        <p data-ja="ジャマイカと日本のルーツを持ち、奄美大島を訪れることに大きな喜びを感じています。島で育ち、東京大学を卒業。国際的な視点と地域への深い愛情を持って、奄美大島の魅力を世界に発信することに情熱を注いでいます。" 
+                           data-en="With roots in Jamaica and Japan, finds great joy in visiting Amami Oshima. Island upbringing, University of Tokyo graduate. Passionate about sharing Amami Oshima's charm with the world through an international perspective and deep local affection.">
+                            ジャマイカと日本のルーツを持ち、奄美大島を訪れることに大きな喜びを感じています。島で育ち、東京大学を卒業。国際的な視点と地域への深い愛情を持って、奄美大島の魅力を世界に発信することに情熱を注いでいます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- News/Updates Section -->
+    <section class="news-section" style="background: var(--bg-alt); padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title" data-ja="最新情報" data-en="Latest Updates">最新情報</h2>
+            
+            <div class="news-feed">
+                <!-- News Item 1 -->
+                <div class="news-post">
+                    <div class="post-date">
+                        <span class="day">15</span>
+                        <span class="month" data-ja="11月" data-en="Nov">11月</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 data-ja="ウェブサイトリニューアル完了" data-en="Website Renewal Complete">ウェブサイトリニューアル完了</h3>
+                        <p data-ja="投資家向けの情報を充実させ、プロジェクトの進捗状況をより分かりやすく表示できるようになりました。画像ギャラリーや詳細な事業計画書もご覧いただけます。" 
+                           data-en="Enhanced investor information and improved project progress visibility. You can now view our image gallery and detailed business plans.">
+                            投資家向けの情報を充実させ、プロジェクトの進捗状況をより分かりやすく表示できるようになりました。画像ギャラリーや詳細な事業計画書もご覧いただけます。
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">#Website</span>
+                            <span class="tag">#Update</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="news-post">
+                    <div class="post-date">
+                        <span class="day">01</span>
+                        <span class="month" data-ja="11月" data-en="Nov">11月</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 data-ja="建築デザインコンセプト発表" data-en="Architectural Design Concept Unveiled">建築デザインコンセプト発表</h3>
+                        <p data-ja="北山セカンドハウスの建築デザインが完成。奄美の自然と調和する和洋折衷のラグジュアリーリゾートとして、プライベートプールやジャグジーを完備した施設を計画しています。" 
+                           data-en="Kitayama Second House architectural design completed. Planning a Japanese-Western fusion luxury resort harmonizing with Amami's nature, complete with private pool and jacuzzi.">
+                            北山セカンドハウスの建築デザインが完成。奄美の自然と調和する和洋折衷のラグジュアリーリゾートとして、プライベートプールやジャグジーを完備した施設を計画しています。
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">#Architecture</span>
+                            <span class="tag">#Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="news-post">
+                    <div class="post-date">
+                        <span class="day">15</span>
+                        <span class="month" data-ja="10月" data-en="Oct">10月</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 data-ja="クラウドファンディング準備開始" data-en="Crowdfunding Preparation Begins">クラウドファンディング準備開始</h3>
+                        <p data-ja="プロジェクトの資金調達に向けて、クラウドファンディングの準備を開始しました。支援者の皆様には、宿泊券や奄美特産品などの特別なリターンをご用意しています。" 
+                           data-en="Started preparing for crowdfunding to raise project funds. Special rewards including accommodation vouchers and Amami specialty products are prepared for supporters.">
+                            プロジェクトの資金調達に向けて、クラウドファンディングの準備を開始しました。支援者の皆様には、宿泊券や奄美特産品などの特別なリターンをご用意しています。
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">#Crowdfunding</span>
+                            <span class="tag">#Investment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 4 -->
+                <div class="news-post">
+                    <div class="post-date">
+                        <span class="day">20</span>
+                        <span class="month" data-ja="7月" data-en="Jul">7月</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 data-ja="現地調査と環境アセスメント完了" data-en="Site Survey and Environmental Assessment Complete">現地調査と環境アセスメント完了</h3>
+                        <p data-ja="芦徳の建設予定地にて詳細な環境調査を実施。世界自然遺産の豊かな自然環境を保護しながら、持続可能な開発を進めることを確認しました。" 
+                           data-en="Conducted detailed environmental survey at the Ashitoku construction site. Confirmed sustainable development while protecting the rich natural environment of the World Natural Heritage site.">
+                            芦徳の建設予定地にて詳細な環境調査を実施。世界自然遺産の豊かな自然環境を保護しながら、持続可能な開発を進めることを確認しました。
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">#Environment</span>
+                            <span class="tag">#Survey</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 5 -->
+                <div class="news-post">
+                    <div class="post-date">
+                        <span class="day">10</span>
+                        <span class="month" data-ja="10月" data-en="Oct">10月</span>
+                        <span class="year">2022</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 data-ja="芦徳の土地購入完了！プロジェクト始動" data-en="Ashitoku Land Purchase Complete! Project Launch">芦徳の土地購入完了！プロジェクト始動</h3>
+                        <p data-ja="奄美大島芦徳にて、Amma Miaプロジェクトの第一歩となる土地の購入が完了しました。美しい海と山に囲まれた理想的な立地で、新たな観光拠点の開発を開始します。" 
+                           data-en="Completed the first step of the Amma Mia project with land purchase in Ashitoku, Amami Oshima. Beginning development of a new tourism hub in this ideal location surrounded by beautiful ocean and mountains.">
+                            奄美大島芦徳にて、Amma Miaプロジェクトの第一歩となる土地の購入が完了しました。美しい海と山に囲まれた理想的な立地で、新たな観光拠点の開発を開始します。
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">#Milestone</span>
+                            <span class="tag">#LandPurchase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back-to-home">
+                <a href="index.html" class="back-link" data-ja="ホームページに戻る" data-en="Back to Homepage">ホームページに戻る</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h1>Amma Mia</h1>
+            <p data-ja="奄美大島の魅力を世界へ" data-en="Sharing Amami Oshima's Charm with the World">奄美大島の魅力を世界へ</p>
+            <p class="copyright">© 2025 Amma Mia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
