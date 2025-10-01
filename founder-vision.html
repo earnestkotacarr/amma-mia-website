@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奄美から世界へ：AMMA-MIAが描く日本文化再興の物語 - Amma Mia</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .article-hero {
+            margin-top: 80px;
+            padding: 60px 0 40px 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            text-align: center;
+        }
+
+        .article-hero h1 {
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            font-family: var(--font-display);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 2rem;
+        }
+
+        .article-meta {
+            color: white;
+            font-size: 0.9rem;
+            margin-top: 1.5rem;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            line-height: 1.9;
+        }
+
+        .article-section {
+            margin-bottom: 3rem;
+        }
+
+        .article-section h2 {
+            font-family: var(--font-display);
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .interview-q {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin: 1.5rem 0 0.8rem 0;
+            font-size: 1.05rem;
+        }
+
+        .interview-a {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-left: 3px solid var(--secondary-color);
+            margin-bottom: 1.5rem;
+            color: var(--text-body);
+            line-height: 1.9;
+        }
+
+        .article-conclusion {
+            background: var(--bg-alt);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-dark);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 1rem 2rem;
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        @media (max-width: 768px) {
+            .article-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .article-content {
+                padding: 40px 20px;
+            }
+
+            .article-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .interview-a {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration: none;">
+                    <h1>Amma Mia</h1>
+                </a>
+                <span class="tagline" data-ja="奄美の美を世界へ" data-en="Amami's Beauty to the World">奄美の美を世界へ</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#overview" data-ja="事業概要" data-en="Overview">事業概要</a>
+                <a href="index.html#accommodation" data-ja="民泊施設" data-en="Accommodation">民泊施設</a>
+                <a href="index.html#branding" data-ja="ブランド" data-en="Brand">ブランド</a>
+                <a href="index.html#crowdfunding" data-ja="クラウドファンディング" data-en="Crowdfunding">クラウドファンディング</a>
+                <a href="about.html" data-ja="About" data-en="About">About</a>
+                <button class="lang-switch" onclick="toggleLanguage()">EN/日本語</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-hero">
+        <h1 data-ja="奄美から世界へ：AMMA-MIAが描く日本文化再興の物語" data-en="From Amami to the World: AMMA-MIA's Vision for Reviving Japanese Culture">
+            奄美から世界へ：AMMA-MIAが描く日本文化再興の物語
+        </h1>
+        <div class="article-meta">
+            <span data-ja="2025年1月" data-en="January 2025">2025年1月</span>
+        </div>
+    </div>
+
+    <article class="article-content">
+        <section class="article-section">
+            <h2 data-ja="プロジェクトの原点" data-en="Project Origins">プロジェクトの原点</h2>
+
+            <p class="interview-q" data-ja="――AMMA-MIAというブランドを立ち上げた背景を教えてください。" data-en="――What inspired you to launch the AMMA-MIA brand?">
+                ――AMMA-MIAというブランドを立ち上げた背景を教えてください。
+            </p>
+
+            <div class="interview-a" data-ja="これまで過去日本ではこういった世界遺産をブランディングしたという経験がないので、このブランディングすることによって世界に売って出ると。今現在製造業の中で車を作っても日本という国は収益が上がらないという環境になっている中で、日本の文化をマネージャーしていくということが非常に大事ではないかと思っていまして、その中でこのアンマミを使ってまだ割安に放置されている土地を活用し、また地元の特産を使ってこれをブランディングすることによって世界に知ってもらおうと。"
+                   data-en="Japan has never branded a World Heritage site like this before. By branding Amami, we can present it to the world. Even in manufacturing, making cars no longer generates sufficient profit for Japan. Managing Japanese culture has become critically important. We're using Amami—still undervalued land and local specialties—to brand and introduce Japan to the world.">
+                「これまで過去日本ではこういった世界遺産をブランディングしたという経験がないので、このブランディングすることによって世界に売って出ると。今現在製造業の中で車を作っても日本という国は収益が上がらないという環境になっている中で、日本の文化をマネージャーしていくということが非常に大事ではないかと思っていまして、その中でこのアンマミを使ってまだ割安に放置されている土地を活用し、また地元の特産を使ってこれをブランディングすることによって世界に知ってもらおうと。」
+            </div>
+
+            <p class="interview-q" data-ja="――なぜ「AMMA-MIA」という名前にしたのですか？" data-en="――Why did you choose the name 'AMMA-MIA'?">
+                ――なぜ「AMMA-MIA」という名前にしたのですか？
+            </p>
+
+            <div class="interview-a" data-ja="イタリア語でママミーヤとアマミーヤというのを組み合わせて、音としても非常に良いので、また覚えていただきやすいと皆さんに。アマミーヤを考えたのですね、イタリア語でママミーヤってオマイガッドっていうすごいっていう話から始まって、すごいっていう��とをアマミイーヤと、日本語で言えばアマミイーヤとこれをいじったと。非常に響きがいいということでこれは世界で覚えていただきやすい名前かなと思ったのでこういう名前にしました。"
+                   data-en="I combined the Italian 'Mamma Mia' with 'Amami-ya.' It sounds great and is easy to remember. Mamma Mia means 'Oh my God' or 'amazing' in Italian, so Amma-Mia conveys that same sense of wonder. The sound is pleasant and memorable globally, which is why I chose this name.">
+                「イタリア語でママミーヤとアマミーヤというのを組み合わせて、音としても非常に良いので、また覚えていただきやすいと皆さんに。アマミーヤを考えたのですね、イタリア語でママミーヤってオマイガッドっていうすごいっていう話から始まって、すごいっていうことをアマミイーヤと、日本語で言えばアマミイーヤとこれをいじったと。非常に響きがいいということでこれは世界で覚えていただきやすい名前かなと思ったのでこういう名前にしました。」
+            </div>
+        </section>
+
+        <section class="article-section">
+            <h2 data-ja="なぜ奄美なのか" data-en="Why Amami">なぜ奄美なのか</h2>
+
+            <p class="interview-q" data-ja="――数ある日本の地域の中で、なぜ奄美に着目されたのでしょうか？" data-en="――Among all regions in Japan, why did you focus on Amami?">
+                ――数ある日本の地域の中で、なぜ奄美に着目されたのでしょうか？
+            </p>
+
+            <div class="interview-a" data-ja="非常に割安に放置されていると。沖縄はもう大圧リズムで非常にもう価格が高騰してて、土地もそうですしホテルも非常に高いという中で、アワビは非常に割安に放置されています。一つヒントを私がゴルフ仲間でいただいたのがですね、沖縄の空港でゴルフ合宿に行く連中がいたんですけれども、奄美の方にですね、沖縄からなんで君たちわざわざ沖縄から奄美に行くのということでですね、学生に聞いたところ、奄美は安いからというコメントをいただいたんですね。"
+                   data-en="Amami has been left significantly undervalued. Okinawa has become very expensive—land and hotels alike. I got a hint from my golf friends at Okinawa airport. When I asked students why they were going to Amami from Okinawa, they said 'because Amami is cheaper.' That's when I discovered the investment opportunity in Amami's affordability.">
+                「非常に割安に放置されていると。沖縄はもう大圧リズムで非常にもう価格が高騰してて、土地もそうですしホテルも非常に高いという中で、アワビは非常に割安に放置されています。一つヒントを私がゴルフ仲間でいただいたのがですね、沖縄の空港でゴルフ合宿に行く連中がいたんですけれども、奄美の方にですね、沖縄からなんで君たちわざわざ沖縄から奄美に行くのということでですね、学生に聞いたところ、奄美は安いからというコメントをいただいたんですね。」
+            </div>
+
+            <div class="interview-a" data-ja="やはり奄美は割安感があるというところに非常に投資ムーミーがあるというところを私は発掘したので、それが一つの大きなきっかけであると。ツボ7万とか10万で買えるようなリゾートの土地っていうのはなかなか、まあ今の世の中ないのでそこをまあ1年、まあ例えば12ヶ月のうち10ヶ月はフル稼働できるような土地で投資できる環境というのはなかなかないので。"
+                   data-en="Amami's affordability presents a real investment opportunity. Resort land for 70,000 to 100,000 yen per tsubo is rare today. Land that can operate at full capacity 10 months out of 12 is an exceptional investment environment.">
+                「やはり奄美は割安感があるというところに非常に投資ムーミーがあるというところを私は発掘したので、それが一つの大きなきっかけであると。ツボ7万とか10万で買えるようなリゾートの土地っていうのはなかなか、まあ今の世の中ないのでそこをまあ1年、まあ例えば12ヶ月のうち10ヶ月はフル稼働できるような土地で投資できる環境というのはなかなかないので。」
+            </div>
+
+            <p class="interview-q" data-ja="――具体的にどのような土地を取得されたのですか？" data-en="――What specific land did you acquire?">
+                ――具体的にどのような土地を取得されたのですか？
+            </p>
+
+            <div class="interview-a" data-ja="私が最初に決めたのはですね、まず地元の人間に私が車で足を運んでですね、いろんな若い人のお話を聞いて、これからどこがいいかという意見を言っていただいてですね、足徳が良かろうということで。足徳というところは湾の中にあってですね、外海に面していない、宇宙にしかないというところで非常に静かで、波が静かで、パドリングもできたりとかですね、いろんなアクティビティができると。一年中海に入れると、ほぼハワイに近いんじゃないかなという気候状態でございますので、雪も当然ながら降ったこともないと。しかも空港から非常に近いと、天海空港から車で15分圏内ということもあって。"
+                   data-en="I drove around and spoke with local young people to get their opinions on the best location. They recommended Ashitoku. Ashitoku is in a bay, not facing the open sea—very calm with gentle waves. You can do paddling and various activities. The climate is almost like Hawaii—you can swim year-round, it never snows, and it's just 15 minutes from Amami Airport.">
+                「私が最初に決めたのはですね、まず地元の人間に私が車で足を運んでですね、いろんな若い人のお話を聞いて、これからどこがいいかという意見を言っていただいてですね、足徳が良かろうということで。足徳というところは湾の中にあってですね、外海に面していない、宇宙にしかないというところで非常に静かで、波が静かで、パドリングもできたりとかですね、いろんなアクティビティができると。一年中海に入れると、ほぼハワイに近いんじゃないかなという気候状態でございますので、雪も当然ながら降ったこともないと。しかも空港から非常に近いと、天海空港から車で15分圏内ということもあって。」
+            </div>
+        </section>
+
+        <section class="article-section">
+            <h2 data-ja="歴史的背景と文化の価値" data-en="Historical Background and Cultural Value">歴史的背景と文化の価値</h2>
+
+            <p class="interview-q" data-ja="――奄美の文化的な価値についてどうお考えですか？" data-en="――What are your thoughts on Amami's cultural value?">
+                ――奄美の文化的な価値についてどうお考えですか？
+            </p>
+
+            <div class="interview-a" data-ja="文化は昔江戸時代の頃から薩摩の方で発信されたと。当幕の話もありましたけれども、過去明治維新の頃ですね、パリ万博で薩摩の美術品を出したところですね。島づけの家紋が、今ルイ・ビトンのモノグラムになっているというぐらいですから。その時代に薩摩���南の県である鹿児島でですね、それが今現代においてルイ・ビトンのモノグラムになっているというのは非常に、日本人としては下世なんですけれども、残念ながら日本の家紋が海外のルイ・ビトンのモノグラムになっているということ自体、非常にいい話ではあるんですけど。"
+                   data-en="Culture from Satsuma has been promoted since the Edo period. During the Meiji era, Satsuma exhibited art at the Paris Exposition. The Shimazu clan crest became Louis Vuitton's monogram pattern. While it's a point of pride, it's also regrettable that a Japanese family crest became a foreign luxury brand's symbol.">
+                「文化は昔江戸時代の頃から薩摩の方で発信されたと。当幕の話もありましたけれども、過去明治維新の頃ですね、パリ万博で薩摩の美術品を出したところですね。島づけの家紋が、今ルイ・ビトンのモノグラムになっているというぐらいですから。その時代に薩摩の南の県である鹿児島でですね、それが今現代においてルイ・ビトンのモノグラムになっているというのは非常に、日本人としては下世なんですけれども、残念ながら日本の家紋が海外のルイ・ビトンのモノグラムになっているということ自体、非常にいい話ではあるんですけど。」
+            </div>
+
+            <div class="interview-a" data-ja="我々としては同じようにですね、南の島である天宮島を活用してですね、日本全国、世界中にですね、この天宮というブランディングを、今度は逆の発想でルイ・ビトンがやったように、今度は我々がやるというようなことを一つ考えています。"
+                   data-en="We want to do the reverse—use Amami, a southern island, to brand and promote Japan nationwide and worldwide, just as Louis Vuitton did with our cultural heritage. This time, we'll be the ones creating the global brand.">
+                「我々としては同じようにですね、南の島である天宮島を活用してですね、日本全国、世界中にですね、この天宮というブランディングを、今度は逆の発想でルイ・ビトンがやったように、今度は我々がやるというようなことを一つ考えています。」
+            </div>
+        </section>
+
+        <section class="article-section">
+            <h2 data-ja="具体的な事業展開" data-en="Business Development">具体的な事業展開</h2>
+
+            <p class="interview-q" data-ja="――民泊事業についてお聞かせください。" data-en="――Please tell us about the vacation rental business.">
+                ――民泊事業についてお聞かせください。
+            </p>
+
+            <div class="interview-a" data-ja="民泊授業につきましては、まずアマミーヤの事務所を取得した土地に設置してですね、民泊授業を始めました。対象のお客様は基本的には富裕層をターゲットにして、1泊20万から30万円ほど取れるような料金設定にして、地元の飲食店さんと提携してですね、お客様をお迎えするというような計画でスタートさせようと思っています。"
+                   data-en="We'll establish our vacation rental business on the land we acquired for Amma Mia's office. We're targeting affluent guests with rates of 200,000 to 300,000 yen per night, partnering with local restaurants to welcome our guests.">
+                「民泊授業につきましては、まずアマミーヤの事務所を取得した土地に設置してですね、民泊授業を始めました。対象のお客様は基本的には富裕層をターゲットにして、1泊20万から30万円ほど取れるような料金設定にして、地元の飲食店さんと提携してですね、お客様をお迎えするというような計画でスタートさせようと思っています。」
+            </div>
+
+            <p class="interview-q" data-ja="――奄美の特産品をどのようにブランディングしていくのですか？" data-en="――How will you brand Amami's specialty products?">
+                ――奄美の特産品をどのようにブランディングしていくのですか？
+            </p>
+
+            <div class="interview-a" data-ja="一つ、私が最近気づいたことで思うのが、奄美の黒糖焼酎で非常に高品質なものがあるんですけど、これは日本人にもあまり知られていない、行ってみないと分からない、地元の人間で知らないようなものなんですけど、これをこの間飲ませていただいて、これは普通だったら一生懸命1万円払っても価値はおかしくないなというものが3700円で売られたりしているので。やっぱり日本のこういった非常にハイクオリティなものが国内で安く消費されていて、海外に持って行けば2倍以上売れると、こういった襲撃チャンスが私としてはあるんじゃないかという風に思ってまして。"
+                   data-en="I recently discovered high-quality Amami brown sugar shochu that even most Japanese don't know about. Products worth 10,000 yen are sold for just 3,700 yen. These high-quality Japanese products are consumed cheaply domestically, but could sell for double or more overseas. That's the opportunity I see.">
+                「一つ、私が最近気づいたことで思うのが、奄美の黒糖焼酎で非常に高品質なものがあるんですけど、これは日本人にもあまり知られていない、行ってみないと分からない、地元の人間で知らないようなものなんですけど、これをこの間飲ませていただいて、これは普通だったら一生懸命1万円払っても価値はおかしくないなというものが3700円で売られたりしているので。やっぱり日本のこういった非常にハイクオリティなものが国内で安く消費されていて、海外に持って行けば2倍以上売れると、こういった襲撃チャンスが私としてはあるんじゃないかという風に思ってまして。」
+            </div>
+
+            <div class="interview-a" data-ja="一つとってみれば、それはアマミ屋ブランドでアマミ屋コーヒーということで世界で売り出すとかですね、大島ツリーも同じようにアマミ屋アパレルで売り出すとか、あと法職員であればアマミ屋のパールをアマミ屋パールで売り出すとか、あと地元のコンビニをアマミ屋コンビニストアとか、すべて統一ブランド化することによってアマミ屋を認知してもらうと、アマミ屋という名前でですね。"
+                   data-en="For example, we could sell Amma Mia coffee globally, Oshima Tsumugi as Amma Mia apparel, pearls as Amma Mia pearls, or even local convenience stores as Amma Mia stores. By unifying everything under the Amma Mia brand, we'll build recognition for the name.">
+                「一つとってみれば、それはアマミ屋ブランドでアマミ屋コーヒーということで世界で売り出すとかですね、大島ツリーも同じようにアマミ屋アパレルで売り出すとか、あと法職員であればアマミ屋のパールをアマミ屋パールで売り出すとか、あと地元のコンビニをアマミ屋コンビニストアとか、すべて統一ブランド化することによってアマミ屋を認知してもらうと、アマミ屋という名前でですね。」
+            </div>
+        </section>
+
+        <section class="article-section">
+            <h2 data-ja="日本再興への想い" data-en="Vision for Japan's Revival">日本再興への��い</h2>
+
+            <p class="interview-q" data-ja="――このプロジェクトに込められた想いを教えてください。" data-en="――What thoughts and feelings have you put into this project?">
+                ――このプロジェクトに込められた想いを教えてください。
+            </p>
+
+            <div class="interview-a" data-ja="外資系金融で30数年働いてきたんですけれども、金融の世界から見てもですね、過去不良債権処理の過程で日本の資産が非常に安く売却され、その後高値で買い戻すという形で、日本は大きく損してきたと。私は当時は外資系にいたので、その経験からして、外資であれだけ日本を利用してですね儲けてて、なんで日本人は儲けなきゃいけないのというルールはないので。"
+                   data-en="After over 30 years in foreign finance, I saw how Japan's assets were sold cheaply during the bad debt disposal process, then bought back at high prices—a huge loss for Japan. I was with foreign firms then, and saw how they profited from Japan. There's no rule saying Japanese people can't profit too.">
+                「外資系金融で30数年働いてきたんですけれども、金融の世界から見てもですね、過去不良債権処理の過程で日本の資産が非常に安く売却され、その後高値で買い戻すという形で、日本は大きく損してきたと。私は当時は外資系にいたので、その経験からして、外資であれだけ日本を利用してですね儲けてて、なんで日本人は儲けなきゃいけないのというルールはないので。」
+            </div>
+
+            <div class="interview-a" data-ja="今回私は強く熱意を持って頑張りたいなと思うのは、逆の立場に立って、日本人を儲けていいんだよということをですね、日本人に知ってもらいたいと。そうすることによって、やっぱり日本人自体も国民も夢を持てる世界になりますし、子供を持ちたいとかですね、大きい環境も変わってくるんじゃないかなというふうに思いますので、これをぜひとも私は実現させたいと。"
+                   data-en="I'm passionate about reversing that position—showing Japanese people that it's okay to profit. When Japanese people have that mindset, we can create a world where our citizens have dreams, want to have children, and the whole environment changes. I absolutely want to make this happen.">
+                「今回私は強く熱意を持って頑張りたいなと思うのは、逆の立場に立って、日本人を儲けていいんだよということをですね、日本人に知ってもらいたいと。そうすることによって、やっぱり日本人自体も国民も夢を持てる世界になりますし、子供を持ちたいとかですね、大きい環境も変わってくるんじゃないかなというふうに思いますので、これをぜひとも私は実現させたいと。」
+            </div>
+
+            <p class="interview-q" data-ja="――日本の文化や製品の価値についてどう考えていますか？" data-en="――How do you view the value of Japanese culture and products?">
+                ――日本の文化や製品の価値についてどう考えていますか？
+            </p>
+
+            <div class="interview-a" data-ja="日本という国は世界で類のない国であると。文化であったり、物であったり、人であったり、世界で多分おそらく日本でしかない。日本人は世界最高の人類であるというふうに私は思っていますので、これが売れないはずはないというふうに思っていますし、これを非常に大事にしてですね、やはり世界を変えて、日本の世界を変えていきたいというふうに思っています。"
+                   data-en="Japan is a country unlike any other in the world—its culture, products, and people are unique. I believe Japanese people are among the finest humanity has to offer, so there's no reason we can't succeed globally. I want to cherish this and change the world—change Japan's place in the world.">
+                「日本という国は世界で類のない国であると。文化であったり、物であったり、人であったり、世界で多分おそらく日本でしかない。日本人は世界最高の人類であるというふうに私は思っていますので、これが売れないはずはないというふうに思っていますし、これを非常に大事にしてですね、やはり世界を変えて、日本の世界を変えていきたいというふうに思っています。」
+            </div>
+
+            <div class="interview-a" data-ja="日本人はもう非常に儲け話に対しては非常に謙虚であるというところから、今まで全部収益は外人が持っていったということでこれからは日本に収益をもたらす事業。これを非常に我々にフォーカスしていまして、日本も儲けていいんじゃないかというふうに持ってまして強く持ってましてそのあたりをまあ特に良いものを作る日本ですから、技術及びまだ国民性非常に平和主室で親切であるというところでですね、まあそこに対してのやっぱり付加価値はあるというふうに我々認識しているので。"
+                   data-en="Japanese people are very modest about profit, which is why foreigners have taken all the revenue until now. Going forward, we're focused on business that brings profit to Japan. Japan deserves to profit—we create excellent products with superior technology, and our people are peaceful and kind. We recognize that has tremendous added value.">
+                「日本人はもう非常に儲け話に対しては非常に謙虚であるというところから、今まで全部収益は外人が持っていったということでこれからは日本に収益をもたらす事業。これを非常に我々にフォーカスしていまして、日本も儲けていいんじゃないかというふうに持ってまして強く持ってましてそのあたりをまあ特に良いものを作る日本ですから、技術及びまだ国民性非常に平和主義で親切であるというところでですね、まあそこに対してのやっぱり付加価値はあるというふうに我々認識しているので。」
+            </div>
+        </section>
+
+        <section class="article-section">
+            <h2 data-ja="最終的なビジョン" data-en="Ultimate Vision">最終的なビジョン</h2>
+
+            <p class="interview-q" data-ja="――AMMA-MIAの最終的な目標を教えてください。" data-en="――What is AMMA-MIA's ultimate goal?">
+                ――AMMA-MIAの最終的な目標を教えてください。
+            </p>
+
+            <div class="interview-a" data-ja="将来的な目標としては、このアマンミーヤブランドが世界遺産であるアマミを大きくできることによってですね、ゆくゆくは、このアマンミーヤブランドネームを使って、豪富可価なものを、日本の製品を世界に売っていくと。とっかかりは雨宮を使ってやりますけれども最終的にはですね日本全国ですね展開していきたいなというふうに思っています。日本の文化を高負荷価値付けて販売していくと、これが雨宮の経営戦略、最終的な経営戦略ですね。"
+                   data-en="Our long-term goal is to grow Amami, a World Heritage site, through the Amma Mia brand, then use that brand name to sell premium Japanese products globally. We'll start with Amami, but ultimately want to expand nationwide. Adding high value to Japanese culture and selling it—that's our final business strategy.">
+                「将来的な目標としては、このアマンミーヤブランドが世界遺産であるアマミを大きくできることによってですね、ゆくゆくは、このアマンミーヤブランドネームを使って、豪富可価なものを、日本の製品を世界に売っていくと。とっかかりは雨宮を使ってやりますけれども最終的にはですね日本全国ですね展開していきたいなというふうに思っています。日本の文化を高負荷価値付けて販売していくと、これが雨宮の経営戦略、最終的な経営戦略ですね。」
+            </div>
+
+            <div class="interview-a" data-ja="日本の文化を売るっていうのは日本でしか作れない製品ですね。例えば大島つむぎだったら海外では作れません。島豆腐も島でしか作れません。黒糖焼酎も雨宮でしかできません。今のところは日本でしかできないものを、これまで価格を安く販売したものを、それに高負荷価値を付けてある程度収益を乗せてですね、日本が儲かる形を作りたいというのが最終的な目標です。"
+                   data-en="Selling Japanese culture means products that can only be made in Japan. Oshima Tsumugi can't be made overseas. Island tofu can only be made on the island. Brown sugar shochu can only be made in Amami. Our goal is to take products that Japan has been selling cheaply, add high value, include proper profit margins, and create a model where Japan profits. That's our ultimate goal.">
+                「日本の文化を売るっていうのは日本でしか作れない製品ですね。例えば大島つむぎだったら海外では作れません。島豆腐も島でしか作れません。黒糖焼酎も雨宮でしかできません。今のところは日本でしかできないものを、これまで価格を安く販売したものを、それに高負荷価値を付けてある程度収益を乗せてですね、日本が儲かる形を作りたいというのが最終的な目標です。」
+            </div>
+        </section>
+
+        <div class="article-conclusion" data-ja="AMMA-MIAは、奄美という世界遺産の島から始まる、日本文化再興のプロジェクトです。割安に放置されてきた日本の宝を、適正な価値で世界に届けることで、日本に収益をもたらし、国民に夢を与える。それが私たちの使命です。"
+             data-en="AMMA-MIA is a project to revive Japanese culture, starting from Amami, a World Heritage island. Our mission is to bring proper value to Japan's undervalued treasures, deliver them to the world, bring profit to Japan, and give our people dreams.">
+            AMMA-MIAは、奄美という世界遺産の島から始まる、日本文化再興のプロジェクトです。割安に放置されてきた日本の宝を、適正な価値で世界に届けることで、日本に収益をもたらし、国民に夢を与える。それが私たちの使命です。
+        </div>
+
+        <div style="text-align: center;">
+            <a href="about.html" class="back-link" data-ja="Aboutページに戻る" data-en="Back to About">Aboutページに戻る</a>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <h1>Amma Mia</h1>
+            <p data-ja="奄美大島の魅力を世界へ" data-en="Sharing Amami Oshima's Charm with the World">奄美大島の魅力を世界へ</p>
+            <p class="copyright">© 2025 Amma Mia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -222,7 +222,30 @@
             transform: scale(1.05);
             box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
-        
+
+        .featured-post {
+            background: linear-gradient(135deg, rgba(201, 169, 97, 0.05), rgba(0, 107, 125, 0.05));
+            border: 2px solid var(--secondary-color);
+        }
+
+        .featured-post .post-content h3 {
+            color: var(--accent-color);
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+
         /* Mobile Home button - hidden on desktop */
         .mobile-home {
             display: none;
@@ -479,6 +502,28 @@
             <h2 class="section-title" data-ja="最新情報" data-en="Latest Updates">最新情報</h2>
             
             <div class="news-feed">
+                <!-- Featured Post -->
+                <div class="news-post featured-post">
+                    <div class="post-date">
+                        <span class="day">15</span>
+                        <span class="month" data-ja="1月" data-en="Jan">1月</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 data-ja="創業者インタビュー：奄美から世界へ" data-en="Founder Interview: From Amami to the World">創業者インタビュー：奄美から世界へ</h3>
+                        <p data-ja="AMMA-MIAの原点から未来のビジョンまで。世界遺産・奄美大島を起点に、日本文化を世界に発信し、適正な価値で収益をもたらすプロジェクトの全貌をご紹介します。"
+                           data-en="From AMMA-MIA's origins to our future vision. Discover our project to promote Japanese culture globally from Amami Oshima, a World Heritage site, and bring proper value and profit to Japan.">
+                            AMMA-MIAの原点から未来のビジョンまで。世界遺産・奄美大島を起点に、日本文化を世界に発信し、適正な価値で収益をもたらすプロジェクトの全貌をご紹介します。
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">#創業者インタビュー</span>
+                            <span class="tag">#ビジョン</span>
+                            <span class="tag">#日本文化</span>
+                        </div>
+                        <a href="founder-vision.html" class="read-more" data-ja="続きを読む →" data-en="Read More →">続きを読む →</a>
+                    </div>
+                </div>
+
                 <!-- News Item 1 -->
                 <div class="news-post">
                     <div class="post-date">
